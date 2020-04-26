@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     selector: 'header',
     template: `
         <mat-toolbar id="header" role="heading" color="primary">
-            Header
+            <span routerLink="/">Header</span>
         </mat-toolbar>
     `,
 })

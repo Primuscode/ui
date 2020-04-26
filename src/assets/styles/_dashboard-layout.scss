@@ -8,8 +8,39 @@
 ========================*/
 #page {
     height: calc(100% - 64px);
-
-    #sidebar { width: 240px; height: 100%; float: left; background-color: whitesmoke; }
     #page-content { width: calc(100% - 240px); height: 100%; float: left; }
     #content { padding: 16px; }
+}
+
+/*=======================
+    Sidebar
+========================*/
+#sidebar {
+    width: 240px; height: 100%; float: left;
+    overflow-y: auto; border-right: 2px solid whitesmoke;
+
+    /* Expansion Panel */
+    .mat-accordion {
+        .mat-expansion-panel {
+            box-shadow: none; border-radius: 0; background-color: transparent;
+            .mat-expansion-panel-header {
+                padding: 0 16px; line-height: 24px; .mat-icon { margin-right: 10px; }
+                &.active {
+                    .mat-expansion-indicator::after { color: $color-accent; }
+                    color: $color-accent;
+                }
+            }
+            .mat-expansion-panel-body { padding: 0; }
+            &.mat-expansion-panel-spacing { margin: 0; }
+        }
+    }
+
+    /* List */
+    .mat-list {
+        padding: 0;
+        .mat-list-item {
+            height: auto; padding: 5px 5px 5px 24px;
+            &.active { color: $color-accent; }
+        }
+    }
 }

@@ -1,5 +1,7 @@
 // Modules
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material';
 
 // Components
@@ -13,7 +15,7 @@ const SharedComponents = [
 
 @NgModule({
     declarations: [...SharedComponents],
-    imports: [MaterialModule],
+    imports: [CommonModule, RouterModule, MaterialModule],
     exports: [...SharedComponents, MaterialModule]
 })
 
