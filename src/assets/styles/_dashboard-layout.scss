@@ -1,0 +1,15 @@
+/*=======================
+    Header
+========================*/
+#header { height: 64px; }
+
+/*=======================
+    Page
+========================*/
+#page {
+    height: calc(100% - 64px);
+
+    #sidebar { width: 240px; height: 100%; float: left; background-color: whitesmoke; }
+    #page-content { width: calc(100% - 240px); height: 100%; float: left; }
+    #content { padding: 16px; }
+}
